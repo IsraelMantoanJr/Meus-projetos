@@ -2,9 +2,13 @@ import psutil # Importa a biblioteca psutil
 import time # Importa a biblioteca time
 
 while True: # Cria um loop infinito
+    
     cpu_percent = psutil.cpu_percent() # Obtém o uso da CPU em porcentagem
+    
     virtual_memory = psutil.virtual_memory() # Obtém informações sobre a memória virtual
+    
     disk_usage = psutil.disk_usage("/") # Obtém informações sobre o uso do disco
+    
     temperature = psutil.sensors_temperatures()['coretemp'][0].current # Obtém a temperatura da CPU
 
     print("CPU Usage:", cpu_percent, "%") # Exibe informações sobre o uso da CPU
